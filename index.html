@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- INTESTAZIONE DELLA PAGINA -->
-    <header class="bg-dark ">
+    <header class="bg-dark mb-4">
         <div class="container">
 
             <nav class="navbar navbar-dark navbar-expand-lg ">
@@ -35,6 +35,72 @@
     </header>
     <!-- CORPO DELLA PAGINA  -->
     <main>
+      <div class="container ">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+    <!--Titolo e descrizione della pagina-->
+            <section>
+              <h2>Richiesta Preventivo</h2>
+              <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
+            </section>
+
+            <form action="">
+              <!-- Dati dell'utente -->
+              <div class="mb-3">
+                <label for="userName" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="userName">
+              </div>
+              <div class="mb-3">
+                <label for="userSurname" class="form-label">Cognome</label>
+                <input type="text" class="form-control" id="userSurname">
+              </div>
+              <div class="mb-3">
+                <label for="userEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="userEmail">
+              </div>
+              <!-- Tipo di lavoro da svolgere -->
+              <div class="mb-3">
+                <label for="jobs" class="form-label">Tipo di lavoro</label>
+                <select class="form-select" id="jobs">
+                  <option selected>Seleziona il tipo di lavoro</option>
+                  <option value="1">Frontend Development</option>
+                  <option value="2">Backend Development</option>
+                  <option value="3">Project Analysis</option>
+                </select>
+              </div>
+              <div class= "mb-3">
+                <label for="notes" class="mb-2">Note</label>
+                <textarea class="form-control" id="notes" rows="3"></textarea>
+              </div>
+              <!--Codice promo e calcolo preventivo -->
+              <div class="mb-3">
+                <label for="promoCode" class="form-label">Codice promozionale (opzionale)</label>
+                <input type="text" class="form-control" id="promoCode">
+              </div>
+              <div class="mb-3 d-flex gap-2">
+                <input class="form-check-input" type="checkbox" id="privacyPolicy">
+                <label class="form-check-label" for="privacyPolicy">Accetto la Privacy Policy</label>
+              </div>
+              <div class="row align-content-center">
+                <div class="col-12 col-lg-6 align-content-center">
+                  <div class="text-center mb-2">
+                    <input class="btn btn-primary" type="submit" value="Calcola preventivo">
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 align-content-center">
+                  <div id="finalPrice" class="text-center fs-6">
+                    <p class="m-0"><strong>Prezzo finale</strong></p>
+                    <span><strong class="fs-4">€ 200</strong>,00</span>
+                  </div>
+                </div>  
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+
                 <!-- riga -->
         <!-- colonna 1      colonna 2  (responsive) --> 
         <!-- form richiesta      sezione info -->
