@@ -74,3 +74,25 @@ state bene attenti, JavaScript vi fa le magie con i tipi…!
 Gestione degli errori
 Restituire all’utente un messaggio nel caso di errori o inserimenti non validi. Esistono diversi
 approcci che puoi adottare come html5 validation o javascript.
+
+LOGICA JS:
+salvo in una variabile le ore di lavoro da svolgrere;
+salvo in una variabile la scelta del tipo di lavoro selezionata dall'utente;
+creo una variabile dove salvo il prezzo in base al lavoro selezionato dall'utente:
+    se l'utente ha selezionato l'opzione backend allora il prezzo sarà 20.50;
+    altrimenti se l'utente ha selezionato l'opzione frontend allora il prezzo sarà 15.30;
+    altrimenti se l'utente ha selezionato l'opzione data analysis il prezzo sarà 33.60;
+Salvo in una variabile il calcolo del prezzo finale dato dal prezzo del lavoro moltiplicato al numero di ore;
+Salvo in un'array i codici sconto;
+All'invio del form restituisco all'utente il prezzo finale:
+    Se l'utente ha inserito uno dei codici sconto validi il prezzo finale sarà scontato del 25%
+    altrimenti non viene calcolato nessuno sconto
+Formatto il prezzo finale in forma umana con due cifre decimali;
+
+
+
+
+
+
+
+
