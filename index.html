@@ -48,21 +48,21 @@
               <!-- Dati dell'utente -->
               <div class="mb-3">
                 <label for="userName" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="userName">
+                <input type="text" class="form-control" id="userName" required>
               </div>
               <div class="mb-3">
                 <label for="userSurname" class="form-label">Cognome</label>
-                <input type="text" class="form-control" id="userSurname">
+                <input type="text" class="form-control" id="userSurname" required>
               </div>
               <div class="mb-3">
                 <label for="userEmail" class="form-label">Email</label>
-                <input type="email" class="form-control" id="userEmail">
+                <input type="email" class="form-control" id="userEmail" required>
               </div>
               <!-- Tipo di lavoro da svolgere -->
               <div class="mb-3">
                 <label for="workType" class="form-label">Tipo di lavoro</label>
-                <select id="workType" class="form-select" >
-                  <option selected >Seleziona il tipo di lavoro</option>
+                <select id="workType" class="form-select" required>
+                  <option  value="">Seleziona il tipo di lavoro</option>
                   <option  value="1">Frontend Development</option>
                   <option  value="2">Backend Development</option>
                   <option  value="3">Project Analysis</option>
@@ -78,7 +78,7 @@
                 <input type="text" class="form-control" id="promoCode">
               </div>
               <div class="mb-3 d-flex gap-2">
-                <input class="form-check-input" type="checkbox" id="privacyPolicy">
+                <input class="form-check-input" type="checkbox" id="privacyPolicy" required>
                 <label class="form-check-label" for="privacyPolicy">Accetto la Privacy Policy</label>
               </div>
               <div class="row align-content-center">
@@ -90,7 +90,7 @@
                 <div class="col-12 col-lg-6 align-content-center mb-3">
                   <div id="finalPrice" class="text-center fs-6 d-none">
                     <p class="m-0"><strong>Prezzo finale</strong></p>
-                    <span id="result"><strong class="fs-4">€ 200</strong>,00</span>
+                    <span ><strong id="result"></strong></span>
                   </div>
                 </div>  
               </div>

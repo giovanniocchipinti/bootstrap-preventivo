@@ -4,10 +4,15 @@ const finalResult = document.getElementById('finalPrice');
 const result = finalResult.querySelector('#result')
 const calcForm = document.getElementById('prevForm');
 
+//prezzo finale
+
+
+
 calcForm.addEventListener('submit', function (event) {
     let workSelected = document.getElementById('workType').value; //tipo di lavoro
     event.preventDefault();
-    result.innerHTML = priceCalc(workTime, workSelected);
+    result.classList.add('fs-5')
+    result.innerHTML = priceCalc(workTime, workSelected).toFixed(2);
     finalResult.classList.remove('d-none')
 })
 
@@ -15,6 +20,9 @@ calcForm.addEventListener('submit', function (event) {
 
 //funzioni
 
+
+
+//funzione che calcola il prezzo del lavoro in base alla selezione dell'utente
 function priceCalc(workTime, workSelected) {
     let workPrice = 0; // prezzo variabile in base al tipo di lavoro selezionato dall'utente
     if (workSelected == 1) {
@@ -25,10 +33,8 @@ function priceCalc(workTime, workSelected) {
         workPrice = 33.60;
     }
     
-    let finalPrice = workPrice * workTime;
-   
+    let finalPrice = workTime * workPrice
     
-
     return finalPrice
 }
 
