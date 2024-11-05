@@ -21,20 +21,24 @@ calcForm.addEventListener('submit', function (event) {
     let discount = (finalPrice * 25) / 100; //calcolo dell'eventuale sconto da applicare
     
     //istruzione condizionale per verificare idoneità sconto e manipolazione del DOM
+    event.preventDefault();
 
     if (discountCodes.includes(discountInsert) == true) {
+
         let priceDisc = finalPrice - discount;  
         result.innerHTML += priceDisc;
              
-    }else {
-        alert('Inserisci un codice sconto valido!')
+    }else if (discountInsert == '') {
+
         result.innerHTML += finalPrice;
+
+    }else {
+
+        result.innerHTML += finalPrice;
+        alert('Inserisci un codice valido')
     }
+    result.classList.add('fs-2')
 
-    result.classList.add('fs-5')
-
-    event.preventDefault();
-    
     finalResult.classList.remove('d-none')
 })
 
