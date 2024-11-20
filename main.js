@@ -5,16 +5,10 @@ const result = finalResult.querySelector('#result')
 const calcForm = document.getElementById('prevForm'); // form principale che contiene i dati inseriti dall'utente
 const discountCodes = ['YHDNU32', 'JANJC63', 'PWKCN25', 'PWKCN25', 'POCIE24'] //codici sconto validi
 
-
-
 //calcolo del prezzo finale al sumbit dell'utente 
-
-
-
 calcForm.addEventListener('submit', function (event) {
 
     //recupero dati dal form
-
     let workSelected = document.getElementById('workType').value; //tipo di lavoro
     let discountInsert = document.getElementById("promoCode").value; // codice sconto inserito dall'utente
     let finalPrice = priceCalc(workTime, workSelected).toFixed(2); // calcolo del prezzo finale 
@@ -26,15 +20,15 @@ calcForm.addEventListener('submit', function (event) {
     if (discountCodes.includes(discountInsert) == true) {
 
         let priceDisc = finalPrice - discount;  
-        result.innerHTML += priceDisc;
+        result.innerHTML = priceDisc;
              
     }else if (discountInsert == '') {
 
-        result.innerHTML += finalPrice;
+        result.innerHTML = finalPrice;
 
     }else {
 
-        result.innerHTML += finalPrice;
+        result.innerHTML = finalPrice;
         alert('Inserisci un codice valido')
     }
     result.classList.add('fs-2')
@@ -42,11 +36,7 @@ calcForm.addEventListener('submit', function (event) {
     finalResult.classList.remove('d-none')
 })
 
-
-
 //funzioni
-
-
 
 //funzione che calcola il prezzo del lavoro in base alla selezione dell'utente
 /**
@@ -55,8 +45,6 @@ calcForm.addEventListener('submit', function (event) {
  * @param {string} workSelected lavoro selezionato
  * @returns {number} prezzo finale
  */
-
-
 function priceCalc(workTime, workSelected) {
     let workPrice = 0; // prezzo variabile in base al tipo di lavoro selezionato dall'utente
     if (workSelected == 1) {
@@ -71,15 +59,3 @@ function priceCalc(workTime, workSelected) {
 
     return finalPrice
 }
-
-
-
-
-
-
-
-
-
-
-
-
