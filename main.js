@@ -2,7 +2,7 @@
 const workTime = 10; //ore di lavoro standard
 const finalResult = document.getElementById('finalPrice'); // recupero prezzo visualizzato nel DOM
 const result = finalResult.querySelector('#result') 
-const calcForm = document.getElementById('prevForm'); // form principale che contiene i dati inseriti dakk'utente
+const calcForm = document.getElementById('prevForm'); // form principale che contiene i dati inseriti dall'utente
 const discountCodes = ['YHDNU32', 'JANJC63', 'PWKCN25', 'PWKCN25', 'POCIE24'] //codici sconto validi
 
 
